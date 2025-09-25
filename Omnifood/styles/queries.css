@@ -1,0 +1,420 @@
+/* ***************************** */
+/* BELLOW 1350px (SMALLER DESKTOPS)  */
+/* ***************************** */
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+  .hero-heading-primary {
+    font-size: 4.4rem;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .testimonials-box {
+    align-items: end;
+  }
+  .testimonial-text {
+    font-size: 2rem;
+  }
+  .customer-name {
+    font-size: 1.8rem;
+  }
+  .header {
+    padding: 0 3.2rem;
+  }
+  .testimonials {
+    padding: 3.2rem;
+  }
+
+  .pricing-box {
+    gap: 4.8rem;
+  }
+}
+
+/* MAIN BREKPOINTS 1200, 1024, 768, 576 */
+
+/* ***************************** */
+/* BELLOW 1200px (Landscape Tablets */
+/* ***************************** */
+@media (max-width: 75em) {
+  html {
+    /* set the default to 9px --> 9/16 = 56.25% */
+    font-size: 56.25%;
+    /* the width now is 120rem * 9px = 1080px (our next breakpoint) */
+  }
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+  .hero {
+    gap: 8rem;
+  }
+}
+
+/* ***************************** */
+/* BELLOW 1024px */
+/* ***************************** */
+@media (max-width: 64em) {
+  html {
+    /* 8px --> 8/16 = 50% */
+    font-size: 50%;
+    /* the width now is 120rem * 8px = 960px */
+  }
+}
+
+/* ***************************** */
+/* BELLOW 960px  */
+/* ***************************** */
+@media (max-width: 60em) {
+  .main-nav-list {
+    gap: 1.4rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 4.8rem;
+  }
+  .hero-text-box {
+    text-align: center;
+  }
+  .hero-image-box {
+    justify-self: center;
+    width: 70%;
+  }
+  .hero-description {
+    font-size: 2rem;
+    padding: 0 6.4rem;
+  }
+  .delivered-meals {
+    gap: 1.6rem;
+    margin-top: 3.2rem;
+  }
+  .feat-companies img {
+    height: 2.4rem;
+  }
+  .heading-secondary {
+    margin-bottom: 6.4rem;
+  }
+  .meals {
+    padding: 1.6rem 3.2rem 3.2rem 3.2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .meals-text {
+    text-align: center;
+  }
+  .diets-box {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+  .diets-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: start;
+    column-gap: 8rem;
+  }
+  .diets-heading {
+    text-align: center;
+    margin-top: 4.8rem;
+  }
+  .testimonials-gallery-box {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-box {
+  }
+  .testimonials {
+    padding: 3.2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+  }
+  .pricing-plan li:last-child span {
+    font-size: 1.6rem;
+  }
+
+  .pricing-box {
+    width: 100%;
+  }
+  .pricing-plan {
+    width: 85%;
+  }
+  .pricing-plan--starter {
+    justify-self: center;
+  }
+  .features-box {
+    grid-template-columns: 1fr 1fr;
+    gap: 6.4rem;
+    padding: 0 4.8rem;
+  }
+  .cta {
+    /* 3/5 = 60%, 2/5 = 40% */
+    grid-template-columns: 3fr 2fr;
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .btn--form {
+    margin-top: 2.4rem;
+  }
+  .grid--footer {
+    gap: 4.8rem;
+  }
+}
+@media (max-width: 54em) {
+  /* MOBILE NAVIGATION */
+  .menu-btn {
+    display: block;
+  }
+
+  .main-nav {
+    background: var(--color-meal-samples);
+    position: absolute; /* in relation with whole body */
+    top: 0;
+    right: 0;
+    width: 45vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* HIDE NAVIGATION */
+    /* display: none; Allows NO transitions  */
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: none;
+    transform: translateX(100%);
+    transition: all 0.2s ease-out;
+
+    position: relative;
+  }
+  .nav-open {
+    position: fixed;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 1000;
+    overflow-y: auto; /* scroll, with this, we're no longer need to disable body scroll */
+    padding: 4.8rem 0;
+  }
+  .menu-btn {
+    display: block;
+    color: var(--color-grey);
+    z-index: 1001;
+  }
+
+  .mode-btn {
+    background: var(--bg-toggle-btn);
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 2.3rem 0.6rem;
+    position: absolute;
+    top: 3.5%;
+    left: 2%;
+  }
+
+  /* .icon--btn-nav[name="close-outline"] {
+    display: none;
+  } */
+  .menu-btn.active .icon-close {
+    display: block;
+  }
+  .menu-btn.active .icon-menu {
+    display: none;
+  }
+  .overlay {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    background: var(--color-overlay);
+    z-index: 500;
+    /* display: none; */
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .overlay.enable {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  html.no-scroll,
+  body.no-scroll {
+    /* overflow: hidden; */
+    /* position: fixed; */
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4.8rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3.2rem;
+  }
+  .btn--nav:link,
+  .btn--nav:visited {
+    padding: 1.6rem 3.2rem;
+  }
+}
+
+/* ***************************** */
+/* BELLOW 750px  */
+/* ***************************** */
+@media (max-width: 47em) {
+  .feat-companies img {
+    height: 1.6rem;
+  }
+
+  .section-how-it-works {
+    padding: 6.4rem 0;
+  }
+  .steps.grid {
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+  .steps-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+  .steps-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+  .steps-img-box {
+    transform: translateY(40px);
+  }
+
+  .pricing-box {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .pricing-plan {
+    width: 50%;
+  }
+
+  /* */
+}
+
+/* ***************************** */
+/* BELLOW 576px (mobile phones)  */
+/* ***************************** */
+@media (max-width: 36em) {
+  html {
+    /* 7 pixels */
+    font-size: 43.75%;
+  }
+  .header {
+    padding: 0 2rem;
+    gap: 0;
+  }
+  .hero {
+    padding: 0 3.2rem;
+  }
+  .btn--start-eating:link,
+  .btn--start-eating:visited {
+    /* margin-right: 0 !important; */
+    margin-bottom: 2rem;
+  }
+  .feat-companies {
+    justify-content: center;
+  }
+
+  .hero-image-box {
+    justify-self: center;
+    width: 80%;
+  }
+
+  .feat-companies img {
+    height: 1.2rem;
+  }
+  .meals {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .diets-list {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-box {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .pricing-plan--complete::after {
+    top: 6%;
+    right: -25%;
+  }
+
+  .features-box {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+  .cta-img {
+    height: 50rem;
+    grid-row: 1;
+  }
+  .cta-text-box {
+    padding: 4.8rem 2.4rem 6.4rem 2.4rem;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 8rem;
+
+    padding: 0 2rem;
+  }
+  .logo-col,
+  .contacts-box {
+    grid-row: 2;
+    grid-column: span 3;
+  }
+  .footer--navs {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+}
+
+/* ***************************** */
+/* BELLOW 450px (smaller mobile phones)  */
+/* ***************************** */
+@media (max-width: 29em) {
+  .meal-sample {
+    width: 85%;
+  }
+  .pricing-plan {
+    width: 85%;
+  }
+  .pricing-plan li:last-child span {
+    font-size: 1.8rem;
+  }
+  .pricing-plan--complete::after {
+    top: 6%;
+    right: -25%;
+  }
+  .grid--footer {
+    column-gap: 4.8rem;
+  }
+}
+/* - Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

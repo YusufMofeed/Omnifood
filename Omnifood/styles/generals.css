@@ -1,0 +1,279 @@
+/* 
+-------------------------------------**** DESIGN INGREDIANTS ****-------------------------------------
+
+--- 01 TYPOGRAPHY SYSTEM
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Defualt 400
+500
+600
+700
+
+- Line heights
+Default: 1
+1.05
+1.2
+1.6
+
+
+--- 02 COLORS
+#888
+tags:
+#4ce027
+#ade121
+#ffd43b
+- Primary: #e67e22
+
+- Tints: #fdf2e9
+
+
+- Shades: 
+#cf711f
+
+- Accents: 
+
+- Greys:  
+#555
+#333
+
+--- 03 IMAGES (PROVIDED)
+--- 04 ICONS (PROVIDED)
+
+--- 05 SHADOWS
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075)
+
+
+--- 06 BORDER RADUIS
+Default: 9px
+11px (cards)
+100px (tags)
+
+--- 07 WHITESPACE
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* 
+transitions duration 
+0.1s
+*/
+
+/* Global reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* documant  */
+html {
+  scroll-behavior: smooth;
+
+  /* 10px / 16px(d) = 0.625 -> 62.5%*/
+  /* 62.5% of whatever the browser's default */
+  font-size: 62.5%;
+
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1rem;
+  font-family: var(--font-main);
+  font-weight: var(--weight-regular);
+  line-height: 1;
+  color: var(--color-oppisite-mode);
+  background: var(--color-mode);
+  overflow-x: hidden;
+
+  transition: all 0.3s ease;
+}
+
+/* ***************************** */
+/* GENERAL REUSABLE COMPONENTS */
+/* ***************************** */
+
+/* CENTERING  */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+/* GRIDS  */
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+.grid--two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--five-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+/* -------------------------- */
+
+/* FLEX  */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+/* ------------------------------ */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+/* BUTTONS  */
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-grey);
+  font-size: 2rem;
+  font-weight: var(--weight-bold);
+  padding: 1.6rem 3.2rem;
+  background: var(--color-main);
+  outline: 3px solid transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover,
+.btn:active {
+  background: color-mix(in srgb, var(--color-main) 90%, #000);
+}
+
+/* Helper margin small class  */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+/* ICONS  */
+.icons {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: var(--color-main);
+}
+
+/* SECTION HEADINGS  */
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-shade);
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+/* FOCUS STATE  */
+*:focus {
+  outline: none;
+  /* outline: 4px dotted var(--color-main);
+  outline-offset: 8px; */
+
+  /* TRICK TO WRAP ARROUND  */
+  /* box-shadow: 0 0 0 1rem rgba(230, 125, 34, 0.456); */
+}
+
+/* --------------------------------------------------------------------- */
+/* Root variables  */
+/* Light mode  */
+:root {
+  /* DEFAULTS */
+
+  /* COLORS  */
+  --color-mode: #fff;
+  --color-oppisite-mode: #333;
+  --color-grey: #555;
+  --color-white-grey: #ddd;
+
+  --color-main: #e67e22;
+  --color-tint: #fdf2e9;
+  --color-shade: #cf711f;
+  --color-meal-samples: #fff;
+  --color-tag-0: #4ce027;
+  --color-tag-1: #ade121;
+  --color-tag-2: #ffd43b;
+
+  --color-orange-btn: #fff;
+  --color-overlay: rgba(173, 168, 168, 0.174);
+
+  --bg-toggle-btn: #e6e6e6;
+
+  /* FONTS */
+  --font-main: "Rubik", sans-serif;
+
+  /* SIZES  */
+  --size-hdr: 1rem;
+
+  /* FONT WEIGHTS  */
+  --weight-regular: 400;
+  --weight-bold: 700;
+  --weight-light: 300;
+
+  /* IMAGES  */
+  --filter-feat-companies: brightness(0);
+
+  /* LOGOS  */
+  --logo: brightness();
+}
+
+/* DARK MODE  */
+:root.dark-mode {
+  /* COLORS  */
+  --color-mode: #1c1c1c; /* خلفية رئيسية داكنة لكن مش أسود كامل */
+  --color-oppisite-mode: #f5f5f5; /* النصوص */
+  --color-grey: #bbb; /* نصوص ثانوية فاتحة */
+  --color-white-grey: #444; /* بوردر/خلفيات أغمق */
+
+  --color-main: #e67e22; /* اللون الأساسي ثابت */
+  --color-tint: #332920; /* خلفية غامقة فيها لمسة من البرتقالي */
+  --color-shade: #ff8c42; /* درجة أفتح/مضيئة للأزرار hover */
+  --color-meal-samples: #2a2a2a;
+
+  --color-orange-btn: #444;
+  --color-overlay: rgba(5, 5, 5, 0.1);
+
+  --bg-toggle-btn: #787878;
+
+  --filter-feat-companies: invert();
+  --logo: invert(1) hue-rotate(180deg);
+}
+
+/* ***************************** */
+/* HIDDEN & REVEAL */
+/* ***************************** */
+
+.hidden {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 1s ease;
+}
+.reveal {
+  opacity: 1;
+  transform: scale(1);
+}
