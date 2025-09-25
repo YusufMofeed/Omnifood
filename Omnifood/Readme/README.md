@@ -12,8 +12,8 @@ Here is a [🔗 Live Demo]()
 ![Browser version, Light mode](screenshots/Screenshot-9.png)
 
 <p align="left">
-  <img src="screenshots/Screenshot-5.png" alt="Mobile version, dark mode" width="45%">
   <img src="screenshots/Screenshot-3.png" alt="Mobile version, side menu" width="45%">
+  <img src="screenshots/Screenshot-5.png" alt="Mobile version, dark mode" width="45%">
 </p>
 
 ![Browser version, Dark mode](screenshots/Screenshot-1.png)
