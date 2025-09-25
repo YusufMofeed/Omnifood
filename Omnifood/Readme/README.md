@@ -5,7 +5,7 @@ Instead of worrying about what to cook every day, Omnifood uses AI to select bal
 
 ## 🚀 Demo
 
-Here is a [🔗 Live Demo]()
+Here is a [🔗 Live Demo](github.com/YusufMofeed/Omnifood)
 
 ## 📷 Screenshots
 
