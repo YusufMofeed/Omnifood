@@ -20,8 +20,8 @@ Here is a [🔗 Live Demo]()
 ![Browser version, Light mode](screenshots/Screenshot-8.png)
 
 <p align="left">
-  <img src="screenshots/Screenshot-6.png" alt="Mobile version, dark mode" width="45%">
   <img src="screenshots/Screenshot-7.png" alt="Mobile version, side menu" width="45%">
+  <img src="screenshots/Screenshot-6.png" alt="Mobile version, dark mode" width="45%">
 </p>
 
 ## ✨ Features
