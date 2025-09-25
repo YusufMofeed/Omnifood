@@ -625,29 +625,36 @@
                 eating well today. You can cancel or pause anytime. And the
                 first meal is on us!
               </p>
-              <form class="cta-form grid grid--two-cols" action="#">
+              <form
+                class="cta-form grid grid--two-cols"
+                action="#"
+                name="sign-up"
+                netlify
+              >
                 <div>
                   <label for="full-name">Full Name</label>
                   <input
                     id="full-name"
                     type="text"
                     placeholder="Full Name"
+                    name="full-name"
                     required
                   />
                 </div>
                 <div>
-                  <label for="email-field">Email address</label>
+                  <label for="email">Email address</label>
                   <input
-                    id="email-field"
+                    id="email"
                     type="email"
                     placeholder="username@example.com"
+                    name="email"
                     required
                   />
                 </div>
 
                 <div>
                   <label for="select-where">Where did you hear about us?</label>
-                  <select id="select-where" required>
+                  <select id="select-where" name="select-where" required>
                     <option value="">Choose an option</option>
                     <option value="friends">Freinds and family</option>
                     <option value="youtube">Youtube video</option>
